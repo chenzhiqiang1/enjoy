@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>MyWeb</title>
+        
+        <style type="text/css">
+        h1{
+            font-size:30px ;
+            color :#930;
+            text-align:center;
+        }
+		
+        .first{
+            font-size:15px ;
+            color :#530;
+			text-align:left;
+			font-style:italic;
+			font-weight:bold;
+			line-height:1.5em;
+			text-indent:2em;
+			text-decoration:underline;  
+        }
+		pre{
+			color :#930;
+			text-align:center;
+		}
+		.strength{
+			color:red;
+			font-weight:blod;
+		}
+		#less{
+			color:blue;
+			font-weight:blod;
+		}
+		a:hover{
+			<!-- font-style:italic; -->
+			color:green;
+			text-align:center;
+		}
+		.oldprice{
+			text-decoration:line-through;
+		}
+		#div1{
+			border:2px black solid;
+			position:fixed;
+			bottom:0;
+			right:0;
+		}
+		.food.li{ border:1px solid red; }/*添加边框样式（粗细为1px， 颜色为红色的实线）*/
+		table tr,th,td{border:1px solid red;}
+        </style>
+		
+		<script type="text/javascript">
+			function rec()
+			{
+				var mymessage= confirm("你是女士吗？");        
+				if(mymessage==true)
+					alert("你是女士!");
+				else
+					alert("你是男士!");
+			}
+			function hidetext()  
+			{  
+				var mychar = document.getElementById("first");
+				mychar.style.display="none";
+			}  
+			function showtext()  
+			{  
+				var mychar = document.getElementById("first");
+				mychar.style.display="block";
+			}
+		</script>
+		
+		<script>
+			var maxstrlen=200;
+			function Q(s){return document.getElementById(s);}
+			function checkWord(c){
+				len=maxstrlen;
+				var str = c.value;
+				myLen=getStrleng(str);
+				var wck=Q("wordCheck");
+				if(myLen>len*2){
+					c.value=str.substring(0,i+1);
+				}
+				else{
+					wck.innerHTML = Math.floor((len*2-myLen)/2);
+				   }
+			}
+			function getStrleng(str){
+				myLen =0;
+				i=0;
+				for(;(i<str.length)&&(myLen<=maxstrlen*2);i++){
+					if(str.charCodeAt(i)>0&&str.charCodeAt(i)<128)
+					myLen++;
+					else
+					myLen+=2;
+				}
+				return myLen;
+			}
+		</script>
+		
+		
+        
+    </head>
+
+
+    <body>
+        <h1 color:red> HELLO </h1>
+		<link href='http://fonts.googleapis.com/css?family=Fruktur' rel='stylesheet' type='text/css'>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		
+		<h2><a href="http://www.gushiwen.org/shiju/">古诗欣赏</a></h2>
+		<div align=center><strong >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《鹿柴》</strong><em>作者：王维</em></div>
+		<pre>
+	　　空山不见人，但闻人语响。
+	　　返影入深林，复照青苔上。
+		</pre>
+		
+		<div align="center">
+        <a  href="mailto:616008154@qq.com ?subject=错误改正 &body=你好，对此诗有所修改。">以上是唐诗中的一首，如有错误，请联系我！</a><br/>
+        
+		
+		<p id="first" class="first">我们常常会因为拥有而<span>快乐</span>，为失去而<span>悲伤</span>，有时候，不知足的人拥有一切却享受不到。
+		知福的人看似一无所有，却是样样都有。<span class="strength">舍与得全在一念之间转换。</span>
+		其实，<span id="less">人生的实相，往往隐藏在追求和拥有底下，</span>是某个让人有所寄托，让人身心安顿的东西。 
+		</p>
+        <form>
+		   <input type="button" onclick="hidetext()" value="隐藏内容" /> 
+		   <input type="button" onclick="showtext()" value="显示内容" /> 
+		</form>
+		
+        </div>
+		
+		<h2><a href="http://www.hfchi.cn/" target="_blank">食物</a></h2>
+		<ul class="food">
+			<li>水果
+				<ul>
+					<li>香蕉</li>
+					<li>苹果</li>
+					<li>梨</li>
+				</ul>
+			</li>
+			<li>蔬菜
+				<ul>
+					<li>白菜</li>
+					<li>油菜</li>
+					<li>卷心菜</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<h2>2012年到2013年库存记录</h2>
+		<table summary="2012年到2013年库存记录">
+		  <caption>本表格记录2012年到2013年库存记录，记录包括U盘和耳机库存量</caption>
+		  <tr>
+			<th>产品名称 </th>
+			<th>品牌 </th>
+			<th>库存量（个） </th>
+			<th>入库时间 </th>
+		  </tr>
+		  <tr>
+			<td>耳机 </td>
+			<td>联想 </td>
+			<td>500</td>
+			<td>2013-1-2</td>
+		  </tr>
+		  <tr>
+			<td>U盘 </td>
+			<td>金士顿 </td>
+			<td>120</td>
+			<td>2013-8-10</td>
+		  </tr>
+		  <tr>
+			<td>U盘 </td>
+			<td>爱国者 </td>
+			<td>133</td>
+			<td>2013-3-25</td>
+		  </tr>
+		</table>
+		
+		<h2>特价商品</h2>
+		<p class="second">原价: <span class="oldprice">300</span>元 现价：200元</p><br><br>
+		
+		<form  method="post" action="save.php">
+        <label>联系我们</label>
+		
+		<textarea onKeyUp="javascript:checkWord(this);" onMouseDown="javascript:checkWord(this);" name="content" style="overflow-y:scroll"></textarea>
+		<div>还可以输入<span style="font-family: Georgia; font-size: 26px;" id="wordCheck">200</span>个字符 </div>
+		
+    
+		</form>
+		
+		<input name="button" type="button" onClick="rec()" value="点击我，弹出确认对话框" />
+		<div id="div1"><img src="http://img.mukewang.com/52b4113500018cf102000200.jpg" ></div>
+    </body>
+
+
+</html>
